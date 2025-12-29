@@ -9,19 +9,19 @@ export default function Home() {
     }
 
     return (
-        <div className="w-full min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-white">
+        <div className="w-full bg-gradient-to-br from-black via-zinc-900 to-black text-white">
 
             {/* HERO */}
-            <section className="min-h-screen flex items-center justify-center px-6">
-                <div className="max-w-7xl w-full text-center relative py-24">
+            <section className="min-h-[calc(100vh-3.5rem)] flex items-center justify-center px-6">
+                <div className="max-w-7xl w-full mx-auto text-center relative py-16">
 
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl animate-pulse -z-10"></div>
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse -z-10"></div>
 
                     <Badge className="mb-6">Next-Gen Authentication</Badge>
 
                     <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 leading-tight">
                         Secure Login <br />
-                        <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent">
               Reimagined
             </span>
                     </h1>
@@ -30,7 +30,7 @@ export default function Home() {
                         Blazing fast, zero-trust authentication system for modern web apps.
                     </p>
 
-                    <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+                    <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
                         <Button size="lg" onClick={() => handleNavigation("/register")}>
                             Get Started <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
@@ -42,7 +42,7 @@ export default function Home() {
                     <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
                         {["99.9% Uptime", "1ms Latency", "10k+ Devs"].map((s, i) => (
                             <div key={i} className="text-center">
-                                <div className="text-3xl font-bold text-indigo-500">{s.split(" ")[0]}</div>
+                                <div className="text-3xl font-bold text-cyan-500">{s.split(" ")[0]}</div>
                                 <div className="text-zinc-500 text-sm">{s.split(" ").slice(1).join(" ")}</div>
                             </div>
                         ))}
@@ -61,7 +61,7 @@ export default function Home() {
                         {features.map((f, i) => (
                             <Card key={i} className="bg-zinc-900/60 border-zinc-800 backdrop-blur-xl hover:scale-105 transition-transform duration-300">
                                 <CardContent className="p-8">
-                                    <div className="w-12 h-12 mb-6 bg-indigo-600/10 rounded-lg flex items-center justify-center mx-auto">
+                                    <div className="w-12 h-12 mb-6 bg-cyan-600/10 rounded-lg flex items-center justify-center mx-auto">
                                         {f.icon}
                                     </div>
                                     <h3 className="text-xl font-semibold mb-3">{f.title}</h3>
@@ -84,9 +84,9 @@ export default function Home() {
                         {steps.map((s, i) => (
                             <div key={i} className="relative flex flex-col items-center">
                                 {i < 2 && (
-                                    <div className="hidden md:block absolute top-12 left-[calc(50%+48px)] w-[calc(100%-96px)] h-0.5 bg-gradient-to-r from-indigo-600 to-transparent"></div>
+                                    <div className="hidden md:block absolute top-12 left-[calc(50%+48px)] w-[calc(100%-96px)] h-0.5 bg-gradient-to-r from-cyan-600 to-transparent"></div>
                                 )}
-                                <div className="w-24 h-24 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl flex items-center justify-center text-4xl font-bold mb-6 shadow-lg shadow-indigo-600/20">
+                                <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center text-4xl font-bold mb-6 shadow-lg shadow-cyan-600/20">
                                     {i + 1}
                                 </div>
                                 <h3 className="text-2xl font-semibold mb-2">{s.title}</h3>
@@ -117,7 +117,7 @@ export default function Home() {
             </section>
 
             {/* CTA */}
-            <section className="py-24 px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-center">
+            <section className="py-24 px-6 bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 text-center">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Start Building Secure Apps Today
@@ -140,9 +140,9 @@ export default function Home() {
 }
 
 const features = [
-    { title: "Passwordless Login", desc: "Magic links, OTPs & biometrics.", icon: <Lock className="w-6 h-6 text-indigo-500" /> },
-    { title: "Enterprise Ready", desc: "Role-based access & org management.", icon: <Shield className="w-6 h-6 text-indigo-500" /> },
-    { title: "Blazing Fast", desc: "Sub-millisecond global latency.", icon: <Zap className="w-6 h-6 text-indigo-500" /> },
+    { title: "Passwordless Login", desc: "Magic links, OTPs & biometrics.", icon: <Lock className="w-6 h-6 text-cyan-500" /> },
+    { title: "Enterprise Ready", desc: "Role-based access & org management.", icon: <Shield className="w-6 h-6 text-cyan-500" /> },
+    { title: "Blazing Fast", desc: "Sub-millisecond global latency.", icon: <Zap className="w-6 h-6 text-cyan-500" /> },
 ]
 
 const steps = [
